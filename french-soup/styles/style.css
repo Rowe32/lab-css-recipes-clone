@@ -1,9 +1,91 @@
 /*Some necessary adjustments*/
-h1, body, html, main {
+h1, h2, body, html, main, p, ul, ol {
   margin: 0;
+  padding: 0px;
 }
 /*Import the font and set the default size*/
 html {
   font-family: 'Open Sans', sans-serif;
   font-size: 18px
+}
+
+main {
+  margin: 0px 90px;
+}
+
+section {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+#intro-section {
+  margin-top: 80px;
+}
+
+.container {
+  position: relative;
+  text-align: center;
+}
+
+.container img {
+  width: 100%;
+  z-index: -1;
+}
+
+header > h1 {
+  font-size: 65px;
+  font-weight: 100;
+  color: white;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+h2 {
+  margin-bottom: 30px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+#intro {
+  font-size: 20px;
+}
+
+.info {
+  width: 350px;
+  margin-top: 40px;
+}
+
+.info-box {
+  display: flex;
+  justify-content: center;
+}
+
+#ingredients {
+  list-style-type: "-";
+  margin-left: 20px;
+}
+
+#ingredients > li {
+  padding-left: 5px;
+}
+
+#directions {
+  margin-left: 25px;
+  counter-reset: list;
+}
+
+#directions li {
+  list-style: none;
+  position: relative;
+  margin-left: 10px;
+}
+
+#directions > li:before {
+  counter-increment: list;
+  position: absolute;
+  content: counter(list, decimal) ")";
+  left: -1.4em;
 }
